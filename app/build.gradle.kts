@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -42,9 +43,12 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.compiler)
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("org.osmdroid:osmdroid-android:6.1.11")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
     implementation("com.google.guava:guava:31.1-android")
     implementation ("com.google.android.gms:play-services-location:18.0.0")
 }

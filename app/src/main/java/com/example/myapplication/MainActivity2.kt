@@ -25,7 +25,7 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_others)
-
+        val fire=findViewById<Button>(R.id.fire)
         val btnWifi = findViewById<Button>(R.id.btnWifi)
         val btnBluetooth = findViewById<Button>(R.id.btnBluetooth)
         val btnCamera = findViewById<Button>(R.id.btnCamera)
@@ -34,7 +34,9 @@ class MainActivity2 : AppCompatActivity() {
         val btnAnimate = findViewById<Button>(R.id.btnAnimate)
         videoView = findViewById(R.id.videoView)
         imageView = findViewById(R.id.imageView)
-
+        fire.setOnClickListener{
+            startActivity((Intent(this,ResultActivity::class.java)))
+        }
         btnWifi.setOnClickListener {
             val wifiManager = applicationContext.getSystemService(WIFI_SERVICE) as WifiManager
             val enabled = wifiManager.isWifiEnabled

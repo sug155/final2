@@ -14,12 +14,14 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" android:maxSdkVersion="35" />
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:maxSdkVersion="35" />
-
-
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT"
+        android:maxSdkVersion="35" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:maxSdkVersion="35" />
 
     <application
         android:allowBackup="true"
@@ -31,6 +33,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".LocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
         <activity
             android:name=".DatabaseHelper"
             android:exported="false" />

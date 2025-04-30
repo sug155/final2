@@ -78,6 +78,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnView: Button
     private lateinit var btnClear: Button
     private val sharedPrefFile = "kotlinsharedpreference"
+    //Map
+    private lateinit var map: Button
 
     // Location variables
     private lateinit var locationProvideClient: FusedLocationProviderClient
@@ -97,7 +99,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        //Map
+        map=findViewById<Button>(R.id.map)
+        map.setOnClickListener {
+            startActivity(Intent(this, LocationActivity::class.java))
+        }
         // Implicit Intent (Visit URL)
         val urlEditText: EditText = findViewById(R.id.urlEditText)
         val visitUrlButton: Button = findViewById(R.id.visitUrlButton)

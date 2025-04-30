@@ -1,97 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-    <!-- WiFi Button -->
-    <Button
-        android:id="@+id/btnWifi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Toggle WiFi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="32dp"/>
-
-    <!-- Bluetooth Button -->
-    <Button
-        android:id="@+id/btnBluetooth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Toggle Bluetooth"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnWifi"
-        android:layout_marginTop="16dp"/>
-
-    <!-- Camera Button -->
-    <Button
-        android:id="@+id/btnCamera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open Camera"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnBluetooth"
-        android:layout_marginTop="16dp"/>
-
-    <!-- Audio Button -->
-    <Button
-        android:id="@+id/btnAudio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play Audio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCamera"
-        android:layout_marginTop="16dp"/>
-
-    <!-- Video Button -->
-    <Button
-        android:id="@+id/btnVideo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play Video"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnAudio"
-        android:layout_marginTop="16dp"/>
-
-    <!-- Animation Button -->
-    <Button
-        android:id="@+id/btnAnimate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Animate Image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnVideo"
-        android:layout_marginTop="16dp"/>
-
-    <!-- ImageView for Animation -->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/ic_launcher_foreground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnAnimate"
-        android:layout_marginTop="32dp"/>
-
-    <!-- VideoView for Video Playback -->
-    <VideoView
-        android:id="@+id/videoView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
-        android:layout_marginTop="32dp"/>
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- WiFi Button -->
+        <Button
+            android:id="@+id/btnWifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle WiFi"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Bluetooth Button -->
+        <Button
+            android:id="@+id/btnBluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle Bluetooth"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnWifi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Camera Button -->
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Camera"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnBluetooth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Audio Button -->
+        <Button
+            android:id="@+id/btnAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Audio"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnCamera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Video Button -->
+        <Button
+            android:id="@+id/btnVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Video"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnAudio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Animate Button -->
+        <Button
+            android:id="@+id/btnAnimate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animate Image"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnVideo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Firebase Button (Fire) -->
+        <Button
+            android:id="@+id/fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FireBase"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnAnimate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Map Button -->
+        <Button
+            android:id="@+id/btnMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Map"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/fire"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/btnMap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- VideoView -->
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
